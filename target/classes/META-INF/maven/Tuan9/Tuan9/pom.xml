@@ -26,6 +26,7 @@
 			<artifactId>hibernate-testing</artifactId>
 			<version>6.4.4.Final</version>
 		</dependency>
+		<!-- MariaDB client lib -->
 		<!--
 		https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>

@@ -15,8 +15,8 @@ import jakarta.persistence.Table;
 @lombok.NoArgsConstructor
 @lombok.ToString(exclude = {"user"})
 @lombok.EqualsAndHashCode
-@Entity
-@Table(name="comments")
+//@Entity
+//@Table(name="comments")
 @NamedQueries({
 	@NamedQuery(
 			name = "Comment.findById", 

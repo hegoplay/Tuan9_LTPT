@@ -16,8 +16,8 @@ import jakarta.persistence.Table;
 @lombok.AllArgsConstructor
 @lombok.NoArgsConstructor
 @lombok.ToString(exclude = "comments")
-@Entity
-@Table(name = "news")
+//@Entity
+//@Table(name = "news")
 @lombok.EqualsAndHashCode
 public class News implements java.io.Serializable{
 	/**

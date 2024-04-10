@@ -13,13 +13,13 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
+//@Entity
 @Getter
 @Setter
 @lombok.AllArgsConstructor
 @lombok.NoArgsConstructor
 @lombok.ToString
-@Table(name="users")
+//@Table(name="users")
 @lombok.EqualsAndHashCode
 public class User implements Serializable {
 	private static final long serialVersionUID = -3127157196329403413L;

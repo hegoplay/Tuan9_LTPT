@@ -13,8 +13,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Embeddable
-@Table(name = "address")
+//@Embeddable
+//@Table(name = "address")
 @lombok.EqualsAndHashCode
 public class Address implements java.io.Serializable{
 	/**
