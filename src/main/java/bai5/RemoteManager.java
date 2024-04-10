@@ -1,4 +1,4 @@
-package bai5.app;
+package bai5;
 
 import java.awt.EventQueue;
 
