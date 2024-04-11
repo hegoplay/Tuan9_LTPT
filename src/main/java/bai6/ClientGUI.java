@@ -105,6 +105,7 @@ public class ClientGUI extends JFrame implements ActionListener {
 		contentPane.add(scrCenter, BorderLayout.CENTER);
 
 		textArea = new JTextArea();
+		textArea.setEditable(false);
 		textArea.setColumns(5);
 		scrCenter.setViewportView(textArea);
 		this.name = name;
