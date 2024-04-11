@@ -1,4 +1,4 @@
-package bai7;
+package bai8;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
@@ -18,7 +18,7 @@ public class UDPServer {
 	private static int port = 2520; 
 
 	private static final int PIECES_OF_FILE_SIZE = 1024 * 32;
-	private static final String parPath = "C:\\Users\\ADMIN\\Pictures\\meme";
+	private static final String parPath = "C:\\Users\\ADMIN\\Pictures\\meme\\";
 	public static void main(String[] args) throws SocketException {
 //		Tạo 1 kết nối mới với port 2520
 		serverSocket = new DatagramSocket(port);
@@ -100,7 +100,7 @@ public class UDPServer {
 			sendData = new DatagramPacket(fileData[i], PIECES_OF_FILE_SIZE, receivePacket.getAddress(),
 					receivePacket.getPort());
 			serverSocket.send(sendData);
-			Thread.sleep(40);
+			Thread.sleep(10);
 		}
 //		sendData = new DatagramPacket(fileData[piecesOfFile - 1], PIECES_OF_FILE_SIZE, receivePacket.getAddress(),
 //				receivePacket.getPort());
