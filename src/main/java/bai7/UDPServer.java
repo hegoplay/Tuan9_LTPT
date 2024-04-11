@@ -18,7 +18,7 @@ public class UDPServer {
 	private static int port = 2520; 
 
 	private static final int PIECES_OF_FILE_SIZE = 1024 * 32;
-	private static final String parPath = "C:\\Users\\ADMIN\\Pictures\\meme";
+	private static final String parPath = "";
 	public static void main(String[] args) throws SocketException {
 //		Tạo 1 kết nối mới với port 2520
 		serverSocket = new DatagramSocket(port);
