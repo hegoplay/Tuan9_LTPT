@@ -11,11 +11,13 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import all.Constant;
+import bai1.service.CalculateDAO;
 import bai1.service.CalculateService;
-import bai1.service.CalculateServiceImpl;
-import bai1.utils.ClientHandler;
+import bai1.utils.ServicesList;
 
 public class ServerApp {
+	
 	public final static int PORT = 11111;
 	
 
@@ -31,11 +33,12 @@ public class ServerApp {
 	private static void startServer() throws RemoteException, AlreadyBoundException {
 		// TODO Auto-generated method stub
 		
-		CalculateServiceImpl impl = new CalculateServiceImpl();
-		CalculateService skeleton = (CalculateService) UnicastRemoteObject.exportObject(impl,0);
 	
 		Registry registry = LocateRegistry.createRegistry(PORT);
-		registry.bind("CalculateService", skeleton);
+		Constant.getConnection();
+		
+		CalculateDAO calculateDAO = (CalculateDAO) new CalculateService(Constant.manager);
+		registry.bind(ServicesList.CALCULATE.getServiceName(), calculateDAO);
 		
 		System.out.println("Server is listening on port " + PORT);
 	}

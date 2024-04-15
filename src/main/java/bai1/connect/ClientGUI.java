@@ -21,7 +21,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
-import bai1.service.CalculateService;
+import bai1.service.CalculateDAO;
+import bai1.utils.ServicesList;
 
 import java.awt.Component;
 import javax.swing.Box;
@@ -45,18 +46,18 @@ public class ClientGUI implements ActionListener{
 	private JButton btnNhan;
 	private JButton btnChia;
 	private Registry registry;
-	private CalculateService service;
+	private CalculateDAO service;
 	private JButton btnXoa;
 	private JButton btnThoat;
 	
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void run() {
 		ClientGUI window = new ClientGUI();
 		window.frame.setVisible(true);
 		try {
-			window.connectToServer("localhost", ServerApp.PORT);
+			window.connectToServer("localhost", 11111);
 		} catch (RemoteException | NotBoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -157,7 +158,7 @@ public class ClientGUI implements ActionListener{
 	private void connectToServer(String serverAddress, int serverPort) throws RemoteException, NotBoundException {
         registry = LocateRegistry.getRegistry(serverAddress, serverPort);
         
-        service = (CalculateService) registry.lookup("CalculateService");
+        service = (CalculateDAO) registry.lookup(ServicesList.CALCULATE.getServiceName());
     
         
         
