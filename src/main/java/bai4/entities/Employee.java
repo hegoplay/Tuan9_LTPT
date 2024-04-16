@@ -8,13 +8,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
-@lombok.Getter
-@lombok.Setter
-@lombok.AllArgsConstructor
-@lombok.NoArgsConstructor
-@lombok.EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@lombok.ToString(exclude = "projs")
-@Entity
+//@lombok.Getter
+//@lombok.Setter
+//@lombok.AllArgsConstructor
+//@lombok.NoArgsConstructor
+//@lombok.EqualsAndHashCode(onlyExplicitlyIncluded = true)
+//@lombok.ToString(exclude = "projs")
+//@Entity
 public class Employee implements java.io.Serializable {
 	/**
 	 * 

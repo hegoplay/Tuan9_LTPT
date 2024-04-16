@@ -18,12 +18,12 @@ import lombok.ToString;
 @lombok.Setter
 @lombok.AllArgsConstructor
 @lombok.EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@Entity
-@Table(name = "projects")
-@NamedQueries({
-	@NamedQuery(name = "Project.findByName", query = "SELECT p FROM Project p WHERE p.projectName = :name")
-
-})
+//@Entity
+//@Table(name = "projects")
+//@NamedQueries({
+//	@NamedQuery(name = "Project.findByName", query = "SELECT p FROM Project p WHERE p.projectName = :name")
+//
+//})
 public class Project implements java.io.Serializable{
 	/**
 	 * 
